@@ -1,0 +1,22 @@
+ext {
+    android = [
+            applicationId    : "com.derelicthut.basecode.mvvmkotlin",
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.2",
+            minSdkVersion    : 21,
+            targetSdkVersion : 30,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    dependencies = [
+            "kotlin-stdlib":"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            "core-ktx":"androidx.core:core-ktx:1.3.2",
+            "appcompat":"androidx.appcompat:appcompat:1.2.0",
+            "material":"com.google.android.material:material:1.2.1",
+            "constraintlayout":"androidx.constraintlayout:constraintlayout:2.0.4",
+            "junit":"junit:junit:4.+",
+            "androidx.test.ext:junit":"androidx.test.ext:junit:1.1.2",
+            "espresso-core":"androidx.test.espresso:espresso-core:3.3.0",
+    ]
+}
