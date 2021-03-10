@@ -32,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures  {
+        dataBinding  = true
+    }
 }
 
 dependencies {
@@ -44,4 +47,5 @@ dependencies {
     implementation config_dependencies["androidx.test.ext:junit"]
     implementation config_dependencies["espresso-core"]
     api config_dependencies["constraintlayout"]
+    api config_dependencies["utilcode"]
 }
