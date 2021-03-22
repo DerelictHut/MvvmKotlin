@@ -12,14 +12,14 @@ import com.derelicthut.basecode.base.InitListener
 /**
  * @author wjl
  */
-abstract class BaseDialogFragment<VDB : ViewDataBinding> :
-    DialogFragment(), InitListener, IBindingInjector<VDB> {
+abstract class BaseDialogFragment<VDB : ViewDataBinding> : DialogFragment(), InitListener,
+    IBindingInjector<VDB> {
     protected lateinit var mRootView: View
     protected val mBundle: Bundle? by lazy { arguments }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater,
+                              container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
         mRootView = inflater.inflate(layoutId(), container, false)
         return mRootView
     }

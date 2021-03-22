@@ -13,5 +13,5 @@ interface IBindingInjector<VDB : ViewDataBinding> {
     @LayoutRes
     fun layoutId(): Int
 
-    fun setBinding(binding: VDB?)
+    fun setBinding(binding: VDB)
 }

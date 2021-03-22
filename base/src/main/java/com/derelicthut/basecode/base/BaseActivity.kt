@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.blankj.utilcode.util.BarUtils
+import com.derelicthut.basecode.base.utils.ActivityHook
 import com.derelicthut.basecode.base.utils.ScreenMatcher
 
 /**
@@ -11,12 +12,17 @@ import com.derelicthut.basecode.base.utils.ScreenMatcher
  */
 abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        handleActivityOrientation()
         super.onCreate(savedInstanceState)
         ScreenMatcher.fix()
         setStatusBar()
     }
 
-    protected fun setStatusBar(){
+    protected fun handleActivityOrientation() {
+        ActivityHook.hookOrientation(this)
+    }
+
+    protected fun setStatusBar() {
         //设置状态栏透明
         BarUtils.setStatusBarColor(this, Color.TRANSPARENT)
         BarUtils.setStatusBarLightMode(this, true)
