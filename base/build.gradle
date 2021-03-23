@@ -51,4 +51,5 @@ dependencies {
     api config_dependencies["utilcode"]
     api config_dependencies["navigation-fragment-ktx"]
     api config_dependencies["navigation-ui-ktx"]
+    api config_dependencies["noober-background"]
 }

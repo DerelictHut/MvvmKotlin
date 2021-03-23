@@ -7,7 +7,7 @@ import androidx.databinding.ViewDataBinding
 /**
  * @author wjl
  */
-abstract class BindActivity<VDB : ViewDataBinding> : BaseActivity(), IBindingInjector<VDB> {
+abstract class BindingActivity<VDB : ViewDataBinding> : BaseActivity(), IBindingInjector<VDB> {
     protected lateinit var mBinding: VDB
 
     override fun setBinding(binding: VDB) {
