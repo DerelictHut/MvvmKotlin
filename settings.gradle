@@ -1,7 +1,7 @@
-include ':netlib'
-include ':dblib'
-include ':comnlib'
-include ':uilib'
-include ':base'
+include ':lib:netlib'
+include ':lib:dblib'
+include ':lib:comnlib'
+include ':lib:uilib'
+include ':lib:base'
 include ':app'
 rootProject.name = "Mvvm Kotlin"

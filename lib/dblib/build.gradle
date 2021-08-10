@@ -1,25 +1,23 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
-    id 'kotlin-kapt'
     id 'kotlin-android-extensions'
 }
 
 def config_android = rootProject.ext.android
-def config_dependencies = rootProject.ext.dependencies
 
 android {
     compileSdkVersion config_android["compileSdkVersion"]
     buildToolsVersion config_android["buildToolsVersion"]
 
     defaultConfig {
-        applicationId config_android["applicationId"]
         minSdkVersion config_android["minSdkVersion"]
         targetSdkVersion config_android["targetSdkVersion"]
         versionCode config_android["versionCode"]
         versionName config_android["versionName"]
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -35,15 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures  {
-        dataBinding  = true
-    }
 }
 
 dependencies {
 
-    implementation config_dependencies["junit"]
-    implementation config_dependencies["androidx.test.ext:junit"]
-    implementation config_dependencies["espresso-core"]
-    implementation project(path: ':lib:comnlib')
+    implementation project(path: ':lib:base')
 }

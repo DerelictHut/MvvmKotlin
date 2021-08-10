@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:interpolator="@android:anim/linear_interpolator" >
-    <!-- android:duration="@android:integer/config_mediumAnimTime"  == 400 -->
-    <translate
-        android:duration="@integer/anim_activity_in_out"
-        android:fromXDelta="-100%p"
-        android:toXDelta="0%p" />
-</set>

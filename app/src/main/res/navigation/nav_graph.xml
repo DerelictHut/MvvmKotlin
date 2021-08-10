@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/nav1Fragment">
+
+    <fragment
+        android:id="@+id/nav1Fragment"
+        android:name="com.derelicthut.basecode.mvvmkotlin.nav.Nav1Fragment"
+        android:label="Nav1Fragment" >
+        <action
+            android:id="@+id/action_nav1Fragment_to_nav2Fragment2"
+            app:destination="@id/nav2Fragment"
+            app:enterAnim="@anim/anim_open_enter_right_to_middle"
+            app:exitAnim="@anim/anim_open_exit_middle_to_left"
+            app:popEnterAnim="@anim/anim_close_enter_left_to_middle"
+            app:popExitAnim="@anim/anim_close_exit_middle_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav2Fragment"
+        android:name="com.derelicthut.basecode.mvvmkotlin.nav.Nav2Fragment"
+        android:label="Nav2Fragment" >
+        <action
+            android:id="@+id/action_nav2Fragment_to_nav3Fragment"
+            app:destination="@id/nav3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav3Fragment"
+        android:name="com.derelicthut.basecode.mvvmkotlin.nav.Nav3Fragment"
+        android:label="Nav3Fragment" />
+</navigation>

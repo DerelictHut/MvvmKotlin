@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="activity_open_close_anim">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_open_enter_right_to_middle</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_open_exit_middle_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_close_enter_left_to_middle</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_close_exit_middle_to_right</item>
+    </style>
+</resources>

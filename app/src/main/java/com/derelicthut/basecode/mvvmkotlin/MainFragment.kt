@@ -10,11 +10,13 @@ import com.derelicthut.basecode.mvvmkotlin.databinding.FragmentMainBinding
  * @author wjl
  */
 class MainFragment : BindingFragment<FragmentMainBinding>() {
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun initVariable() {
         mBinding.clContainer.setBackgroundColor(ResUtils.getColor(R.color.black))
     }
 
-    override fun layoutId(): Int = R.layout.fragment_main
+    override fun initListener() {
 
+    }
+
+    override fun layoutId(): Int = R.layout.fragment_main
 }
