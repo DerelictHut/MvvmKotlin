@@ -1,3 +1,5 @@
+include ':module:setting'
+include ':module:login'
 include ':lib:netlib'
 include ':lib:dblib'
 include ':lib:comnlib'

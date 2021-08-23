@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/nav1Fragment"
-        android:name="com.derelicthut.basecode.mvvmkotlin.nav.Nav1Fragment"
+        android:name="com.dh.app.nav.Nav1Fragment"
         android:label="Nav1Fragment" >
         <action
             android:id="@+id/action_nav1Fragment_to_nav2Fragment2"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav2Fragment"
-        android:name="com.derelicthut.basecode.mvvmkotlin.nav.Nav2Fragment"
+        android:name="com.dh.app.nav.Nav2Fragment"
         android:label="Nav2Fragment" >
         <action
             android:id="@+id/action_nav2Fragment_to_nav3Fragment"
@@ -25,6 +25,6 @@
     </fragment>
     <fragment
         android:id="@+id/nav3Fragment"
-        android:name="com.derelicthut.basecode.mvvmkotlin.nav.Nav3Fragment"
+        android:name="com.dh.app.nav.Nav3Fragment"
         android:label="Nav3Fragment" />
 </navigation>

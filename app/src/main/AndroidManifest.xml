@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.derelicthut.basecode.mvvmkotlin">
+    package="com.dh.app">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".App"
+        android:name="com.dh.app.App"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.dh.app.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"
+        <activity android:name="com.dh.app.SecondActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".nav.TestNavActivity"
+        <activity android:name="com.dh.app.nav.TestNavActivity"
             android:screenOrientation="portrait"/>
     </application>
 

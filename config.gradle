@@ -23,5 +23,7 @@ ext {
             "navigation-fragment-ktx":"androidx.navigation:navigation-fragment-ktx:2.3.4",
             "navigation-ui-ktx":"androidx.navigation:navigation-ui-ktx:2.3.4",
             "noober-background":"com.noober.background:core:1.6.5",
+            "arouter":"com.alibaba:arouter-api:1.5.1",
+            "arouter-compiler":"com.alibaba:arouter-compiler:1.5.1",
     ]
 }

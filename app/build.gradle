@@ -35,15 +35,23 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures  {
-        dataBinding  = true
+    buildFeatures {
+        dataBinding = true
     }
 }
 
 dependencies {
-
     implementation config_dependencies["junit"]
     implementation config_dependencies["androidx.test.ext:junit"]
     implementation config_dependencies["espresso-core"]
     implementation project(path: ':lib:comnlib')
+    implementation project(path: ':module:login')
+    implementation project(path: ':module:setting')
+    kapt(rootProject.ext.dependencies["arouter-compiler"])
+}
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
 }

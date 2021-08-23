@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.derelicthut.basecode.mvvmkotlin.R"/>
+        <import type="com.dh.app.R"/>
         <variable
             name="navFrg"
-            type="com.derelicthut.basecode.mvvmkotlin.nav.Nav1Fragment" />
+            type="com.dh.app.nav.Nav1Fragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

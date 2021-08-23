@@ -53,4 +53,12 @@ dependencies {
     api config_dependencies["navigation-fragment-ktx"]
     api config_dependencies["navigation-ui-ktx"]
     api config_dependencies["noober-background"]
+    api config_dependencies["arouter"]
+    kapt(rootProject.ext.dependencies["arouter-compiler"])
+}
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
 }
