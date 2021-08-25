@@ -2,23 +2,15 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="dhRouter"
-            type="com.dh.base.utils.router.DhRouter" />
-    </data>
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/tv_go_to_login"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/go_to_login"
+            android:text="@string/real_name"
             android:textColor="@color/black"
             android:textSize="@dimen/_30sp"
             android:textStyle="bold"

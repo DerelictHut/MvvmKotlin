@@ -1,16 +1,13 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'kotlin-android-extensions'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion DhAndroid.compileSdkVersion
     buildToolsVersion DhAndroid.buildToolsVersion
 
     defaultConfig {
-        applicationId DhAndroid.applicationId
         minSdkVersion DhAndroid.minSdkVersion
         targetSdkVersion DhAndroid.targetSdkVersion
         versionCode DhAndroid.versionCode
@@ -36,13 +33,12 @@ android {
     buildFeatures {
         dataBinding = true
     }
+    androidExtensions {
+        experimental = true
+    }
 }
 
 dependencies {
-    implementation project(path: ':lib:comnlib')
-    implementation project(path: ':module:login')
-    implementation project(path: ':module:setting')
-    implementation project(path: ':module:arouter')
     kapt(DhDependenciesCompiler.arouter_compiler)
 }
 

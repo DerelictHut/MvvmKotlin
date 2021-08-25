@@ -1,3 +1,4 @@
+include ':module:arouter'
 include ':module:setting'
 include ':module:login'
 include ':lib:netlib'

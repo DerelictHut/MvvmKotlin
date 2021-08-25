@@ -1,64 +1,17 @@
-plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'kotlin-android-extensions'
-}
-def config_android = rootProject.ext.android
-def config_dependencies = rootProject.ext.dependencies
-
-android {
-    compileSdkVersion config_android["compileSdkVersion"]
-    buildToolsVersion config_android["buildToolsVersion"]
-
-    defaultConfig {
-        minSdkVersion config_android["minSdkVersion"]
-        targetSdkVersion config_android["targetSdkVersion"]
-        versionCode config_android["versionCode"]
-        versionName config_android["versionName"]
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-    buildFeatures  {
-        dataBinding  = true
-    }
-}
+apply from: '../../basic.gradle'
 
 dependencies {
-
-    api config_dependencies["kotlin-stdlib"]
-    api config_dependencies["core-ktx"]
-    api config_dependencies["appcompat"]
-    api config_dependencies["material"]
-    implementation config_dependencies["junit"]
-    implementation config_dependencies["androidx.test.ext:junit"]
-    implementation config_dependencies["espresso-core"]
-    api config_dependencies["constraintlayout"]
-    api config_dependencies["utilcode"]
-    api config_dependencies["navigation-fragment-ktx"]
-    api config_dependencies["navigation-ui-ktx"]
-    api config_dependencies["noober-background"]
-    api config_dependencies["arouter"]
-    kapt(rootProject.ext.dependencies["arouter-compiler"])
-}
-
-kapt {
-    arguments {
-        arg("AROUTER_MODULE_NAME", project.getName())
-    }
+    api DhDependencies.kotlin_stdlib
+    api DhDependencies.core_ktx
+    api DhDependencies.appcompat
+    api DhDependencies.material
+    api DhDependencies.constraint_layout
+    api DhTest.junit
+    api DhTest.androidx_test_ext_junit
+    api DhTest.espresso_core
+    api DhDependencies.utilcode
+    api DhDependencies.navigation_fragment_ktx
+    api DhDependencies.navigation_ui_ktx
+    api DhDependencies.noober_background
+    api DhDependencies.arouter
 }

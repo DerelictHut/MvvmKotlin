@@ -26,6 +26,7 @@
             android:onClick="@{v->secondVm.startTestNavActivity()}"
             android:text="NavActivity"
             android:textColor="@color/black"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <TextView
@@ -36,6 +37,18 @@
             android:onClick="@{v->secondVm.startSettingActivity()}"
             android:text="@string/setting"
             android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_arouter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="@{v->secondVm.startARouterActivity()}"
+            android:text="@string/arouter"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
     </LinearLayout>
 </layout>

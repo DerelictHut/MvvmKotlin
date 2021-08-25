@@ -14,10 +14,6 @@ object DhRouter {
         return path(path).nav()
     }
 
-    fun Postcard.nav(): Any? {
-        return navigation(ActivityUtils.getTopActivity())
-    }
-
     fun path(path: String): Postcard {
         return getARouter().build(path)
     }
@@ -30,7 +26,11 @@ object DhRouter {
         getARouter().inject(any)
     }
 
-    fun getARouter(): ARouter {
+    private fun getARouter(): ARouter {
         return ARouter.getInstance()
     }
+}
+
+fun Postcard.nav(): Any? {
+    return navigation(ActivityUtils.getTopActivity())
 }

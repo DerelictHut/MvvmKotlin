@@ -9,19 +9,20 @@
             type="com.dh.base.utils.router.DhRouter" />
     </data>
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/tv_go_to_login"
+            android:id="@+id/tv_go_to_with_param_activity"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/_100dp"
             android:gravity="center"
-            android:text="@string/go_to_login"
+            android:text="@string/go_to_with_param_activity"
             android:textColor="@color/black"
             android:textSize="@dimen/_30sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
-    </FrameLayout>
+    </LinearLayout>
 </layout>
