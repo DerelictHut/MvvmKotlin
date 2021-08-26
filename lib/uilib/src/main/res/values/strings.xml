@@ -10,4 +10,5 @@
     <string name="dynamic_route_registration">动态路由注册</string>
     <string name="unrealized">（未实现）</string>
     <string name="path_replace_service">路由Path被替换</string>
+    <string name="pretreatment_service">预处理服务</string>
 </resources>

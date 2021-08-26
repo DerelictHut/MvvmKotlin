@@ -47,6 +47,8 @@ object ComnRouterPath {
         const val GROUP = "/dh_arouter/"
         const val GROUP_ACTIVITY = "$GROUP$ACTIVITY_PATH"
         const val AROUTER_PATH_REPLACE_SERVICE_IMPL = "${GROUP}arouter/DhPathReplaceServiceImpl"
+        const val AROUTER_PRETREATMENT_SERVICE_IMPL = "${GROUP}arouter/DhPretreatmentServiceImpl"
+        const val AROUTER_PRETREATMENT_SERVICE_ACTIVITY = "${GROUP_ACTIVITY}PretreatmentServiceActivity"
         const val AROUTER_PATH_REPLACE_SERVICE_ACTIVITY = "${GROUP_ACTIVITY}PathReplaceServiceActivity"
         const val AROUTER_WITH_PARAM_ACTIVITY = "${GROUP_ACTIVITY}WithParamActivity"
         const val AROUTER_DYNAMIC_ROUTE_REGISTRATION_ACTIVITY = "${GROUP_ACTIVITY}DynamicRouteRegistrationActivity"
