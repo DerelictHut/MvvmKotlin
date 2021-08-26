@@ -25,8 +25,4 @@ class ModuleInitApp : IModuleInit {
         BaseUtils.closeEnterAnim = R.anim.anim_close_enter_left_to_middle
         BaseUtils.closeExitAnim = R.anim.anim_close_exit_middle_to_right
     }
-
-    override fun init(context: Context?) {
-
-    }
 }

@@ -11,6 +11,7 @@ import com.dh.base.BindingActivity
 import com.dh.base.utils.router.DhRouter
 import com.dh.comn.comn.ComnRouterInterceptConfig
 import com.dh.comn.comn.ComnRouterPath
+import kotlinx.android.parcel.Parcelize
 
 /**
  * @author wjl
@@ -19,30 +20,52 @@ import com.dh.comn.comn.ComnRouterPath
 const val extras = ComnRouterInterceptConfig.INTERCEPT_LOGIN or ComnRouterInterceptConfig.INTERCEPT_REAL_NAME
 const val NICKNAME = "nickname"
 const val ID_CARD = "idCard"
+const val PARCELABLE_BEAN = "parcelableBean"
+const val MAP_STR = "mapStr"
+const val NORMAL_BEAN = "normalBean"
 
 @Route(path = ComnRouterPath.ARouter.AROUTER_WITH_PARAM_ACTIVITY, extras = extras)
 class WithParamActivity : BindingActivity<ActivityWithParamBinding>() {
-    @Autowired(name = NICKNAME, required = true, desc = "昵称")
-    lateinit var mNickname: String
+  @Autowired(name = NICKNAME, required = true, desc = "昵称")
+  lateinit var mNickname: String
 
-    @JvmField
-    @Autowired(name = ID_CARD, desc = "身份证号")
-    var mIdCard: String? = null
+  @Autowired(required = true)
+  lateinit var mSex: String
 
-    override fun layoutId(): Int = R.layout.activity_with_param
+  @JvmField
+  @Autowired(name = ID_CARD, desc = "身份证号")
+  var mIdCard: String? = null
 
-    @SuppressLint("SetTextI18n")
-    override fun initVariable() {
-        BarUtils.addMarginTopEqualStatusBarHeight(mBinding.tvParam)
-        DhRouter.inject(this)
-        with(mBinding.tvParam) {
-            text = "姓名：$mNickname\n身份证：${mIdCard ?: "保密"}"
-        }
+  @JvmField
+  @Autowired(name = PARCELABLE_BEAN)
+  var mParcelableBean: ParcelableBean? = null
+
+  @Autowired(name = MAP_STR, required = true)
+  lateinit var mMap: MutableMap<String, String>
+
+  @Autowired(name = NORMAL_BEAN, required = true)
+  lateinit var mNormalEntity: NormalEntity
+
+  override fun layoutId(): Int = R.layout.activity_with_param
+
+  @SuppressLint("SetTextI18n")
+  override fun initVariable() {
+    BarUtils.addMarginTopEqualStatusBarHeight(mBinding.tvParam)
+    DhRouter.inject(this)
+    with(mBinding.tvParam) {
+      text = "昵称：$mNickname\n性别：$mSex\n身份证：${mIdCard ?: "保密"}" +
+             "\nParcelable自动注入参数：${mParcelableBean?.desc ?: "null"}" +
+             "\nMap自动注入参数：${mMap}\nBean自动注入：${mNormalEntity.desc}"
     }
+  }
 
-    override fun initListener() {
+  override fun initListener() {
 
-    }
+  }
 }
 
-//data class Person(val name: String):Parcelable
+@Parcelize
+data class ParcelableBean(val desc: String) : Parcelable
+
+data class NormalEntity(val desc: String)
+

@@ -11,17 +11,27 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_go_to_with_param_activity"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_100dp"
+            android:layout_height="@dimen/_50dp"
             android:gravity="center"
             android:text="@string/go_to_with_param_activity"
             android:textColor="@color/black"
-            android:textSize="@dimen/_30sp"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/dynamic_route_registration"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
     </LinearLayout>

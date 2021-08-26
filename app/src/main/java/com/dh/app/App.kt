@@ -1,5 +1,6 @@
 package com.dh.app
 
+import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ThreadUtils
 import com.dh.base.BaseApp
 import com.dh.base.R
@@ -14,8 +15,7 @@ class App : BaseApp() {
     override fun onCreate() {
         super.onCreate()
         //初始化模块
-        ModuleInit.moduleInitList.forEach {
-            it?.run { (this as IModuleInit).onCreate(this@App, ThreadUtils.isMainThread()) }
-        }
+        LogUtils.i("sssssssssssssssssssddd"+ThreadUtils.isMainThread())
+        ModuleInit.init()
     }
 }

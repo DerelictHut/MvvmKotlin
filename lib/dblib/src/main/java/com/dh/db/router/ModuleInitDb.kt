@@ -15,8 +15,4 @@ class ModuleInitDb : IModuleInit {
     override fun onCreate(app: Application, isMainProcess: Boolean) {
 
     }
-
-    override fun init(context: Context?) {
-
-    }
 }

@@ -14,4 +14,5 @@ dependencies {
     api DhDependencies.navigation_ui_ktx
     api DhDependencies.noober_background
     api DhDependencies.arouter
+    api DhDependencies.gson
 }

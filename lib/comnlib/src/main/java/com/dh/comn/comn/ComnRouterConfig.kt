@@ -13,14 +13,18 @@ object ModuleInit {
     const val MODULE_INIT_COMN = "/comn/router/ModuleInitComn"
     const val MODULE_INIT_LOGIN = "/login/router/ModuleInitLogin"
     const val MODULE_INIT_SETTING = "/setting/router/ModuleInitSetting"
+    const val MODULE_INIT_AROUTER = "/dhArouter/router/ModuleInitARouter"
 
-    //需要初始化的module集合
-    val moduleInitList = mutableListOf(DhRouter.nav(MODULE_INIT_APP),
-        DhRouter.nav(MODULE_INIT_COMN),
-        DhRouter.nav(MODULE_INIT_DB),
-        DhRouter.nav(MODULE_INIT_NET),
-        DhRouter.nav(MODULE_INIT_LOGIN),
-        DhRouter.nav(MODULE_INIT_SETTING))
+    fun init() {
+        //需要初始化的module集合
+        DhRouter.nav(MODULE_INIT_APP)
+        DhRouter.nav(MODULE_INIT_COMN)
+        DhRouter.nav(MODULE_INIT_DB)
+        DhRouter.nav(MODULE_INIT_NET)
+        DhRouter.nav(MODULE_INIT_LOGIN)
+        DhRouter.nav(MODULE_INIT_SETTING)
+        DhRouter.nav(MODULE_INIT_AROUTER)
+    }
 }
 
 /**
@@ -30,18 +34,22 @@ object ComnRouterPath {
     private const val ACTIVITY_PATH = "ui/activity/"
 
     object Login {
-        private const val GROUP = "/login/$ACTIVITY_PATH"
-        const val LOGIN_LOGIN_ACTIVITY = "${GROUP}LoginActivity"
+        const val GROUP_ACTIVITY = "/login/$ACTIVITY_PATH"
+        const val LOGIN_LOGIN_ACTIVITY = "${GROUP_ACTIVITY}LoginActivity"
     }
 
     object Setting {
-        private const val GROUP = "/setting/$ACTIVITY_PATH"
-        const val SETTING_REAL_NAME_ACTIVITY = "${GROUP}RealNameActivity"
+        const val GROUP_ACTIVITY = "/setting/$ACTIVITY_PATH"
+        const val SETTING_REAL_NAME_ACTIVITY = "${GROUP_ACTIVITY}RealNameActivity"
     }
 
     object ARouter {
-        private const val GROUP = "/dh_arouter/$ACTIVITY_PATH"
-        const val AROUTER_WITH_PARAM_ACTIVITY = "${GROUP}WithParamActivity"
+        const val GROUP = "/dh_arouter/"
+        const val GROUP_ACTIVITY = "$GROUP$ACTIVITY_PATH"
+        const val AROUTER_PATH_REPLACE_SERVICE_IMPL = "${GROUP}arouter/DhPathReplaceServiceImpl"
+        const val AROUTER_PATH_REPLACE_SERVICE_ACTIVITY = "${GROUP_ACTIVITY}PathReplaceServiceActivity"
+        const val AROUTER_WITH_PARAM_ACTIVITY = "${GROUP_ACTIVITY}WithParamActivity"
+        const val AROUTER_DYNAMIC_ROUTE_REGISTRATION_ACTIVITY = "${GROUP_ACTIVITY}DynamicRouteRegistrationActivity"
     }
 }
 

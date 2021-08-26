@@ -2,6 +2,7 @@ package com.dh.base.utils.router
 
 import com.alibaba.android.arouter.facade.Postcard
 import com.alibaba.android.arouter.facade.template.IProvider
+import com.alibaba.android.arouter.facade.template.IRouteGroup
 import com.alibaba.android.arouter.launcher.ARouter
 import com.blankj.utilcode.util.ActivityUtils
 
@@ -24,6 +25,10 @@ object DhRouter {
 
     fun inject(any: Any) {
         getARouter().inject(any)
+    }
+
+    fun addRouteGroup(iRouteGroup: IRouteGroup) {
+        //1.5.2才开始提供，
     }
 
     private fun getARouter(): ARouter {

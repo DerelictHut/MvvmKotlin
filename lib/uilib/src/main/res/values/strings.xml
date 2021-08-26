@@ -7,4 +7,7 @@
     <string name="go_to_login">跳转登录页面</string>
     <string name="go_to_with_param_activity">跳转WithParamActivity</string>
     <string name="real_name">实名认证</string>
+    <string name="dynamic_route_registration">动态路由注册</string>
+    <string name="unrealized">（未实现）</string>
+    <string name="path_replace_service">路由Path被替换</string>
 </resources>

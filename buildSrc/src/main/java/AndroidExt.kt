@@ -34,6 +34,7 @@ object DhDependencies {
     const val appcompat = "androidx.appcompat:appcompat:1.2.0"
     const val material = "com.google.android.material:material:1.2.1"
     const val constraint_layout = "androidx.constraintlayout:constraintlayout:2.0.4"
+    const val gson = "com.google.code.gson:gson:2.8.8"
 
     //三方
     const val utilcode = "com.blankj:utilcode:1.30.6"
