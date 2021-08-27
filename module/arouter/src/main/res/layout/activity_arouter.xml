@@ -34,5 +34,16 @@
             android:textSize="@dimen/_16sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/degrade_service"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:gravity="center"
+            android:text="@string/degrade_service"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 </layout>

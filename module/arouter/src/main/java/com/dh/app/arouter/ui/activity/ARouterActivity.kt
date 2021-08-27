@@ -43,6 +43,9 @@ class ARouterActivity : BindingActivity<ActivityArouterBinding>() {
         mBinding.dynamicRouteRegistration.setOnClickListener {
             DhRouter.nav(ComnRouterPath.ARouter.AROUTER_DYNAMIC_ROUTE_REGISTRATION_ACTIVITY)
         }
+        mBinding.degradeService.setOnClickListener {
+            DhRouter.nav(ComnRouterPath.INVALID_PATH)
+        }
     }
 
     private val mNavigationCallback = object : NavigationCallback {

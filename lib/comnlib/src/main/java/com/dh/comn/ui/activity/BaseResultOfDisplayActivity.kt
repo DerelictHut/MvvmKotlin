@@ -14,4 +14,8 @@ abstract class BaseResultOfDisplayActivity : BindingActivity<ActivityBaseResultO
     override fun initVariable() {
 
     }
+
+    override fun initListener() {
+
+    }
 }
