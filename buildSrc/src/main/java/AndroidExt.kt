@@ -20,6 +20,9 @@ object DhAndroid {
 
 object DhVersion {
     const val kotlin_version = "1.3.72"
+    const val room_version = "2.3.0"
+    const val arouter_version = "1.5.1"
+    const val navigation_version = "2.3.4"
 }
 
 object DhTest {
@@ -38,12 +41,15 @@ object DhDependencies {
 
     //三方
     const val utilcode = "com.blankj:utilcode:1.30.6"
-    const val navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:2.3.4"
-    const val navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:2.3.4"
+    const val navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:${DhVersion.navigation_version}"
+    const val navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:${DhVersion.navigation_version}"
     const val noober_background = "com.noober.background:core:1.6.5"
-    const val arouter = "com.alibaba:arouter-api:1.5.1"
+    const val arouter = "com.alibaba:arouter-api:${DhVersion.arouter_version}"
+    const val room = "androidx.room:room-runtime:${DhVersion.room_version}"
+    const val room_ktx = "androidx.room:room-ktx:${DhVersion.room_version}"
 }
 
 object DhDependenciesCompiler {
-    const val arouter_compiler = "com.alibaba:arouter-compiler:1.5.1"
+    const val arouter_compiler = "com.alibaba:arouter-compiler:${DhVersion.arouter_version}"
+    const val room_compiler = "androidx.room:room-compiler:${DhVersion.room_version}"
 }

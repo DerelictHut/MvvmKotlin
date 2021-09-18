@@ -2,4 +2,7 @@ apply from: '../../basic.gradle'
 
 dependencies {
     implementation project(path: ':lib:base')
+    api DhDependencies.room
+    api DhDependencies.room_ktx
+    kapt(DhDependenciesCompiler.room_compiler)
 }

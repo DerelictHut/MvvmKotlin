@@ -16,9 +16,7 @@ import com.dh.comn.comn.ComnRouterPath.ARouter.AROUTER_DEGRADE_SERVICE_IMPL
 class DhDegradeServiceImpl : DegradeService {
     override fun onLost(context: Context?, postcard: Postcard) {
         if(ComnRouterPath.INVALID_PATH == postcard.path) {
-            if(Math.random() > 0.15) {
-                DhRouter.nav(ComnRouterPath.ARouter.AROUTER_DEGRADE_SERVICE_ACTIVITY)
-            }
+            DhRouter.nav(ComnRouterPath.ARouter.AROUTER_DEGRADE_SERVICE_ACTIVITY)
         }
     }
 
