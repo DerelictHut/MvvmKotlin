@@ -12,4 +12,5 @@
     <string name="path_replace_service">路由Path被替换</string>
     <string name="pretreatment_service">预处理服务</string>
     <string name="degrade_service">全局降级策略</string>
+    <string name="fragment_interceptor">FragmentInterceptor</string>
 </resources>

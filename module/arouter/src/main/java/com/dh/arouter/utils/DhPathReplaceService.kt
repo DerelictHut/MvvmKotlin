@@ -1,4 +1,4 @@
-package com.dh.app.arouter.utils
+package com.dh.arouter.utils
 
 /**
  * @author wjl

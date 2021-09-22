@@ -1,7 +1,7 @@
-package com.dh.app.arouter.ui.activity
+package com.dh.arouter.ui.activity
 
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.dh.app.arouter.R
+import com.dh.arouter.R
 import com.dh.base.utils.ResUtils
 import com.dh.comn.comn.ComnRouterPath
 import com.dh.comn.ui.activity.BaseResultOfDisplayActivity

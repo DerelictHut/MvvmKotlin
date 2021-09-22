@@ -32,6 +32,7 @@ object ModuleInit {
  */
 object ComnRouterPath {
     private const val ACTIVITY_PATH = "ui/activity/"
+    private const val FRAGMENT_PATH = "ui/fragment/"
 
     //无效路径
     const val INVALID_PATH = "/error/invalid_path"
@@ -49,6 +50,7 @@ object ComnRouterPath {
     object ARouter {
         const val GROUP = "/dh_arouter/"
         const val GROUP_ACTIVITY = "$GROUP$ACTIVITY_PATH"
+        const val GROUP_FRAGMENT = "$GROUP$FRAGMENT_PATH"
         const val AROUTER_PATH_REPLACE_SERVICE_IMPL = "${GROUP}arouter/DhPathReplaceServiceImpl"
         const val AROUTER_PRETREATMENT_SERVICE_IMPL = "${GROUP}arouter/DhPretreatmentServiceImpl"
         const val AROUTER_DEGRADE_SERVICE_IMPL = "${GROUP}arouter/DhDegradeServiceImpl"

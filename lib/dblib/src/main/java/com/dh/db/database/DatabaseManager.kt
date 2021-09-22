@@ -16,7 +16,6 @@ object DatabaseManager {
     private val application: Application by lazy { Utils.getApp() }
     val db: DhDatabase by lazy {
         Room.databaseBuilder(application.applicationContext, DhDatabase::class.java, DB_NAME)
-            .addCallback(CreatedCallBack)
             .addMigrations(*MIGRATIONS)
             .build()
     }
@@ -24,9 +23,6 @@ object DatabaseManager {
     private object CreatedCallBack : RoomDatabase.Callback() {
         override fun onCreate(db: SupportSQLiteDatabase) {
             //在新装app时会调用，调用时机为数据库build()之后，数据库升级时不调用此函数
-            MIGRATIONS.map {
-                it.migrate(db)
-            }
         }
     }
 

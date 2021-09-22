@@ -1,12 +1,12 @@
-package com.dh.app.arouter.ui.activity
+package com.dh.arouter.ui.activity
 
 import android.annotation.SuppressLint
 import android.os.Parcelable
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.blankj.utilcode.util.BarUtils
-import com.dh.app.arouter.R
-import com.dh.app.arouter.databinding.ActivityWithParamBinding
+import com.dh.arouter.R
+import com.dh.arouter.databinding.ActivityWithParamBinding
 import com.dh.base.BindingActivity
 import com.dh.base.utils.router.DhRouter
 import com.dh.comn.comn.ComnRouterInterceptConfig
@@ -17,7 +17,7 @@ import kotlinx.android.parcel.Parcelize
  * @author wjl
  * 携带参数
  */
-const val extras = ComnRouterInterceptConfig.INTERCEPT_LOGIN or ComnRouterInterceptConfig.INTERCEPT_REAL_NAME
+private const val extras = ComnRouterInterceptConfig.INTERCEPT_LOGIN or ComnRouterInterceptConfig.INTERCEPT_REAL_NAME
 const val NICKNAME = "nickname"
 const val ID_CARD = "idCard"
 const val PARCELABLE_BEAN = "parcelableBean"

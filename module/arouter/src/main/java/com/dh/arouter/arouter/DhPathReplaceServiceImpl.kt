@@ -1,10 +1,9 @@
-package com.dh.app.arouter.arouter
+package com.dh.arouter.arouter
 
 import android.content.Context
 import android.net.Uri
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.facade.service.PathReplaceService
-import com.blankj.utilcode.util.LogUtils
 import com.dh.comn.comn.ComnRouterPath
 
 /**

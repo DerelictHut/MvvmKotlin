@@ -1,4 +1,4 @@
-package com.dh.app.arouter.interceptor
+package com.dh.arouter.interceptor
 
 import android.content.Context
 import com.alibaba.android.arouter.facade.Postcard

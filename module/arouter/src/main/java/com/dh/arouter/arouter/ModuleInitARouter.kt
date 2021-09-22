@@ -1,9 +1,9 @@
-package com.dh.app.arouter.arouter
+package com.dh.arouter.arouter
 
 import android.app.Application
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.facade.template.IRouteGroup
-import com.dh.app.arouter.ui.activity.DynamicRouteRegistrationActivity
+import com.dh.arouter.ui.activity.DynamicRouteRegistrationActivity
 import com.dh.base.utils.router.BaseActivityRouteGroup
 import com.dh.base.utils.router.IModuleInit
 import com.dh.comn.comn.ComnRouterPath

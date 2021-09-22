@@ -21,16 +21,25 @@ class MainFragment : BindingFragment<FragmentMainBinding>() {
         mBinding.tvDbInsert.setOnClickListener {
             GlobalScope.launch {
                 DatabaseManager.run {
-                    db.userDao.multipleInsert(User("3", "张三").apply {
+                    db.userDao.multipleInsert(User("1", "张三").apply {
                         phoneNumber = "18888888888"
                         email = "666666@qq.com"
+                        educationExperiences = mutableListOf(
+                            EducationExperience(schoolName = "清华大学", educationBackground = "本科"),
+                            EducationExperience(schoolName = "清华大学", educationBackground = "研究生").apply {
+                                degree = "硕士学位"
+                            },
+                            EducationExperience(schoolName = "普林斯顿大学", educationBackground = "研究生").apply {
+                                degree = "博士学位"
+                            }
+                        )
                     })
-                    db.userDao.multipleInsert(User("4", "first"))
-                    db.educationExperienceDao.multipleInsert(
-                        EducationExperience(schoolName = "清华4", educationBackground = "本科"),
-                        EducationExperience(schoolName = "清华5", educationBackground = "本科"),
-                        EducationExperience(schoolName = "清华6", educationBackground = "本科")
-                    )
+                    db.userDao.multipleInsert(User("2", "李四"))
+                    db.userDao.multipleInsert(User("3", "王二麻子").apply {
+                        educationExperiences = mutableListOf(
+                            EducationExperience(schoolName = "家里蹲大学", educationBackground = "小本")
+                        )
+                    })
                 }
             }
         }
