@@ -1,4 +1,4 @@
-package com.dh.db.converters.base
+package com.dh.db.converters
 
 import com.dh.db.converters.base.BaseTypeConverter
 import java.util.*

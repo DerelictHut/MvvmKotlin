@@ -1,11 +1,13 @@
 package com.dh.app
 
+import com.dh.app.databinding.FragmentMainBinding
 import com.dh.base.BindingFragment
 import com.dh.base.utils.ResUtils
-import com.dh.app.databinding.FragmentMainBinding
 import com.dh.db.database.DatabaseManager
 import com.dh.db.entity.EducationExperience
 import com.dh.db.entity.User
+import com.dh.db.sealeds.DegreeSealed
+import com.dh.db.sealeds.EducationBackgroundSealed
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
@@ -25,19 +27,19 @@ class MainFragment : BindingFragment<FragmentMainBinding>() {
                         phoneNumber = "18888888888"
                         email = "666666@qq.com"
                         educationExperiences = mutableListOf(
-                            EducationExperience(schoolName = "清华大学", educationBackground = "本科"),
-                            EducationExperience(schoolName = "清华大学", educationBackground = "研究生").apply {
-                                degree = "硕士学位"
+                            EducationExperience("清华大学", EducationBackgroundSealed.UndergraduateCourse()),
+                            EducationExperience("清华大学", EducationBackgroundSealed.AGraduateStudent()).apply {
+                                degree = DegreeSealed.MasterDegree()
                             },
-                            EducationExperience(schoolName = "普林斯顿大学", educationBackground = "研究生").apply {
-                                degree = "博士学位"
+                            EducationExperience("普林斯顿大学", EducationBackgroundSealed.AGraduateStudent()).apply {
+                                degree = DegreeSealed.DrDegree()
                             }
                         )
                     })
                     db.userDao.multipleInsert(User("2", "李四"))
                     db.userDao.multipleInsert(User("3", "王二麻子").apply {
                         educationExperiences = mutableListOf(
-                            EducationExperience(schoolName = "家里蹲大学", educationBackground = "小本")
+                            EducationExperience("家里蹲大学", EducationBackgroundSealed.SmallUndergraduate())
                         )
                     })
                 }
