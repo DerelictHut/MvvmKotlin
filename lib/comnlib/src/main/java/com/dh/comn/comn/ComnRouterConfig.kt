@@ -14,6 +14,7 @@ object ModuleInit {
     const val MODULE_INIT_LOGIN = "/login/router/ModuleInitLogin"
     const val MODULE_INIT_SETTING = "/setting/router/ModuleInitSetting"
     const val MODULE_INIT_AROUTER = "/dhArouter/router/ModuleInitARouter"
+    const val MODULE_INIT_ROOM = "/room/router/ModuleInitRoom"
 
     fun init() {
         //需要初始化的module集合
@@ -24,6 +25,7 @@ object ModuleInit {
         DhRouter.nav(MODULE_INIT_LOGIN)
         DhRouter.nav(MODULE_INIT_SETTING)
         DhRouter.nav(MODULE_INIT_AROUTER)
+        DhRouter.nav(MODULE_INIT_ROOM)
     }
 }
 

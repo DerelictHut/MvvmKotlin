@@ -1,5 +1,6 @@
-package com.dh.db.entity
+package com.dh.db.entity.db
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*
@@ -10,8 +11,8 @@ import java.util.*
 @Entity
 open class BaseEntity {
     @PrimaryKey(autoGenerate = true)
-    var id = 0L
-
+    @ColumnInfo(name = "_id")
+    var id: Long = 0L
     //更新时间
     var updateTime: Date = Date()
 

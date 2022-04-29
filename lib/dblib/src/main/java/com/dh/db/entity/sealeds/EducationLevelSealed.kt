@@ -1,4 +1,4 @@
-package com.dh.db.sealeds
+package com.dh.db.entity.sealeds
 
 /**
  * @author wjl

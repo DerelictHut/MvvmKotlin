@@ -9,6 +9,7 @@
     <LinearLayout
         android:id="@+id/cl_container"
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="match_parent">
 
         <TextView
@@ -19,6 +20,17 @@
             android:background="@color/white"
             android:gravity="center"
             android:text="插入User数据"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_db_query_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="@dimen/_1dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="查询UserEmail数据"
             android:textColor="@color/black"
             tools:ignore="HardcodedText" />
     </LinearLayout>

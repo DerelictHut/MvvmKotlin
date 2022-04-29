@@ -28,13 +28,14 @@ object DatabaseManager {
 
     private object Migration1 : Migration(1, 2) {
         override fun migrate(database: SupportSQLiteDatabase) {
+            database.execSQL("alter table User add column 'birthday' varchar(50)")
             database.execSQL("alter table User add column 'phoneNumber' varchar(20)")
         }
     }
 
     private object Migration2 : Migration(2, 3) {
         override fun migrate(database: SupportSQLiteDatabase) {
-            database.execSQL("alter table User add column 'email' varchar(50)")
+            database.execSQL("alter table User add column 'educationExperiences' varchar")
         }
     }
 }

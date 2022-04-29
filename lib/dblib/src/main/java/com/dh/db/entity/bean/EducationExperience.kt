@@ -1,10 +1,10 @@
-package com.dh.db.entity
+package com.dh.db.entity.bean
 
 import androidx.room.TypeConverters
 import com.dh.db.converters.DegreeConverter
 import com.dh.db.converters.EducationBackgroundConverter
-import com.dh.db.sealeds.DegreeSealed
-import com.dh.db.sealeds.EducationBackgroundSealed
+import com.dh.db.entity.sealeds.DegreeSealed
+import com.dh.db.entity.sealeds.EducationBackgroundSealed
 
 /**
  * @author wjl

@@ -23,6 +23,7 @@ object DhVersion {
     const val room_version = "2.3.0"
     const val arouter_version = "1.5.1"
     const val navigation_version = "2.3.4"
+    const val arouter_register = "1.0.2"
 }
 
 object DhTest {
