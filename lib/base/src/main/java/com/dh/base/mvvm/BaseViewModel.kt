@@ -50,5 +50,4 @@ open class BaseViewModel : ViewModel() {
         super.onCleared()
         maps.clear()
     }
-
 }

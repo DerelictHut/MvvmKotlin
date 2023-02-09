@@ -49,6 +49,10 @@ dependencies {
     implementation project(path: ':module:arouter')
     implementation project(path: ':module:room')
     kapt(DhDependenciesCompiler.arouter_compiler)
+
+    implementation 'com.noxgroup.sdk:noxmobi-sdk:4.2.2.5'
+//    implementation 'com.noxgroup.sdk:noxmobi-mediation-applovin-mediation:11.4.4.4'
+    implementation 'com.noxgroup.sdk:noxmobi-sdk-test-suite:1.6.0'
 }
 
 kapt {
